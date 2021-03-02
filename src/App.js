@@ -13,22 +13,18 @@ import './style/main.scss';
 import { AuthContext, AuthProvider } from './provider/provider'
 const App = () => {
     let path = window.location.pathname;
-    if (path != '/') {
+    if (path != '/' && (path!= '/login' && path != '/signup')) {
         path = path.substring(1);
-        console.log(path);
         db.doc(`short/${path}`).get().then((snap) => {
             if (snap.exists) {
                 let url = snap.data().og;
                 let check = "https://";
                 if (url.includes(check) == false) {
                     url = check.concat('', url);
-                    console.log(url);
                 }
                 window.location.href = url;
             }
-            else {
-                alert("invalid")
-            }
+            else alert("Can't find this Shortened URL.");
         })
     }
     return (
