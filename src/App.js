@@ -18,10 +18,6 @@ const App = () => {
         db.doc(`short/${path}`).get().then((snap) => {
             if (snap.exists) {
                 let url = snap.data().og;
-                let check = "https://";
-                if (url.includes(check) == false) {
-                    url = check.concat('', url);
-                }
                 window.location.href = url;
             }
             else alert("Can't find this Shortened URL.");
