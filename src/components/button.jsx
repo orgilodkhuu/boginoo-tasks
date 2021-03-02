@@ -24,6 +24,11 @@ export const Button = (props) => {
       
     */
     return (
-        <button>{children}</button>
+        <div>
+        {
+            disabled ? <button className={`btn ${className+" disabled"}`} onClick={others.onClick}>{children}</button>:
+            <button className={`btn ${className}`} onClick={others.onClick}>{children}</button>
+        }
+        </div>
     );
 };

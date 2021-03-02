@@ -9,12 +9,24 @@
 */
 
 .btn {
+    text-decoration: none!important;
+    outline: none!important;
+    border: none!important;
     border-radius: 100px;
+    text-transform: uppercase;
 }
 
 .disabled {
+    pointer-events: none;
+    opacity: .6;
 }
 
 .input {
-    border-radius: 100px;
+    border-radius: 100px !important;
+    box-sizing: border-box;
+    padding-left: 15px;
+    text-decoration: none!important;
+    outline: none!important;
+    border: none!important;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16) !important;
 }

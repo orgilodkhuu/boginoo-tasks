@@ -2,22 +2,6 @@ import React from 'react';
 import { Navigation } from './';
 
 export const Layout = ({ children }) => {
-    /*
-        Layout component маань хуудсаа бүтэн дүүргэдэг байна
-            hint: style={{ width: '100vw', height: '100vh' }}
-        
-            Дотор нь 3 элемент баганын дагуу байрлана flex-col class-ийг ашиглаарай
-
-            Хамгийн эхэнд 
-                - Navigation component
-                - Үндсэн харуулах component-ууд
-                - Footer хэсэг
-
-            
-            Layout component-ийн кодыг маш сайн ойлгох
-
-    */
-
     return (
         <div className='flex flex-col items-center pa-3' style={{ width: '100vw', height: '100vh' }}>
             {/* NAVIGATION */}
